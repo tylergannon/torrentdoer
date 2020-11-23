@@ -6,6 +6,7 @@ authors = ["Tyler Gannon <tgannon@gmail.com>"]
 include = ["ansible-playbook.yml"]
 readme = "README.md"
 license = "BSD-4-Clause"
+repository = "https://github.com/tylergannon/torrentdoer"
 
 [tool.poetry.scripts]
 torrentdoer = "torrentdoer.entrypoint:cli"
