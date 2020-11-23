@@ -1,8 +1,14 @@
 [tool.poetry]
 name = "torrentdoer"
 version = "0.1.0"
-description = ""
+description = "Do your torrenting from DigitalOcean."
 authors = ["Tyler Gannon <tgannon@gmail.com>"]
+include = ["ansible-playbook.yml"]
+readme = "README.md"
+license = "BSD-4-Clause"
+
+[tool.poetry.scripts]
+torrentdoer = "torrentdoer.entrypoint:cli"
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -12,6 +18,7 @@ click-conf-file = "^0.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+jupyter-book = "^0.8.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

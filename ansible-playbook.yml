@@ -8,8 +8,8 @@
     - name: Install aria2 and tmux
       dnf:
         name:
-          - aria2
           - tmux
+          - transmission-daemon
         state: latest
   vars:
     packages_host:
@@ -19,14 +19,3 @@
         version: latest
 
   remote_user: root
-  # roles:
-  #   - arillso.repositories
-  #   - itigoag.packages
-    # - role: linuxhq.yum
-    #   yum_install:
-    #     - aria2
-    #     - tmux
-    #   yum_opts:
-    #     enablerepo:
-    #       - epel
-    #   yum_update: true
