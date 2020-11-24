@@ -7,6 +7,7 @@ import click
 import digitalocean
 from click_conf_file import conf_option
 
+from .constants import ACCESS_TOKEN
 from .droplet_helper import (
     find_droplet_by_name,
     DropletNotFound,
@@ -15,8 +16,6 @@ from .droplet_helper import (
     expandall,
 )
 from .ssh import wait_for_ssh, make_tunnel
-
-ACCESS_TOKEN = "DIGITALOCEAN_ACCESS_TOKEN"
 
 
 @click.command("create")

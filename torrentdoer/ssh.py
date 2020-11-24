@@ -1,8 +1,8 @@
 "ssh functions"
 import socket
 import time
-from subprocess import run
 from contextlib import closing
+from subprocess import run
 
 import click
 

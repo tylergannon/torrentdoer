@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "torrentdoer"
-version = "0.1.0"
+version = "0.2.0"
 description = "Do your torrenting from DigitalOcean."
 authors = ["Tyler Gannon <tgannon@gmail.com>"]
 include = ["ansible-playbook.yml"]
@@ -15,7 +15,7 @@ torrentdoer = "torrentdoer.entrypoint:cli"
 python = "^3.9"
 ansible = "^2.10.3"
 click = "^7.1.2"
-click-conf-file = "^0.1.0"
+click-conf-file = "^0.1.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

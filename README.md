@@ -33,6 +33,7 @@ localhost:9091.
 ### Retrieve Files
 
 This will run rsync between the transmission daemon and your local machine.
+
 ```bash
 torrentdoer retrieve
 ```
@@ -43,6 +44,20 @@ Save money by deleting the server when not in use.
 
 ```bash
 torrentdoer destroy
+```
+
+### Open SSH Session To Droplet
+
+
+```bash
+torrentdoer ssh
+```
+
+### (Re-)Open SSH Tunnel
+
+
+```bash
+torrentdoer tunnel
 ```
 
 Have fun!

@@ -3,7 +3,7 @@ import sys
 
 import click
 from click_conf_file import conf_option
-from .create import ACCESS_TOKEN
+from .constants import ACCESS_TOKEN
 from .droplet_helper import DropletNotFound, find_droplet_by_name, rsync, expandall
 
 
