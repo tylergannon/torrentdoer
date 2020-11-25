@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "torrentdoer"
-version = "0.2.0"
+version = "0.3.0"
 description = "Do your torrenting from DigitalOcean."
 authors = ["Tyler Gannon <tgannon@gmail.com>"]
 include = ["ansible-playbook.yml"]

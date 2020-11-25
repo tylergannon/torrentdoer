@@ -5,6 +5,7 @@ from os import chdir, getcwd
 from os.path import dirname, expanduser, expandvars, join
 from sys import executable
 from tempfile import TemporaryDirectory
+from typing import Iterable
 
 from digitalocean import Droplet, Manager
 
@@ -41,10 +42,18 @@ def find_droplet_by_name(droplet_name: str, access_token: str) -> Droplet:
         raise DropletNotFound(f"Droplet {droplet_name} not found.") from None
 
 
-def rsync(source, dest):
+def rsync(source, dest, include: Iterable[str] = ()):
     "Runs rsync in a subprocess"
+
+    if include is None or len(include) == 0:
+        inc_params = '--exclude="*.part"'
+    else:
+        inc_params = " ".join(f'"--include={i}"' for i in include) + ' --exclude="*"'
+
     subprocess.run(
-        f"rsync -ruv '{source}' '{dest}' --exclude '*.part'", check=True, shell=True
+        f"rsync -ruv '{source}' '{dest}' {inc_params} --progress",
+        check=True,
+        shell=True,
     )
 
 
